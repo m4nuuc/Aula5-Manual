@@ -198,6 +198,36 @@ Seleciona dados de uma tabela.
 SELECT * FROM clientes;
 ```
 
+## Comando `DELETE`
+Exemplo de DELETE
+//...
+try {
+    int id = 1; 
+    String comando = "DELETE FROM veiculos WHERE id = ?";
+    PreparedStatement pstmt;
+    pstmt = conexao.prepareStatement(comando);
+    pstmt.setInt(1, id);
+    pstmt.executeUpdate();
+    JOptionPane.showMessageDialog(this, "Apagado com sucesso");
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Erro ao apagar");
+}
+exemplo 2
+
+try {
+    String id_ = jLabel1.getText();
+    int id = Integer.parseInt(id_);
+    String comando = "DELETE FROM veiculos WHERE id = ?";
+    PreparedStatement pstmt;
+    pstmt = conexao.prepareStatement(comando);
+    pstmt.setInt(1, id);
+    pstmt.executeUpdate();
+    JOptionPane.showMessageDialog(this, "Apagado com sucesso");
+    jButton5.doClick();
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Erro ao apagar");
+}
+
 ### Execução do Comando `SELECT` em Java
 
 ```java
