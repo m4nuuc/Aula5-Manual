@@ -199,8 +199,9 @@ SELECT * FROM clientes;
 ```
 
 ## Comando `DELETE`
-Exemplo de DELETE
-//...
+Deleta dados de uma tabela.
+
+```sql
 try {
     int id = 1; 
     String comando = "DELETE FROM veiculos WHERE id = ?";
